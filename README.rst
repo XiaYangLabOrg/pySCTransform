@@ -4,6 +4,10 @@ pySCTranscform
 
 SCTransform for Python - interfaces with `Scanpy <https://scanpy.readthedocs.io/en/stable/>`_
 
+Disclaimer: This is a fork of the original repo, which you can find at https://github.com/saketkc/pySCTransform  
+
+The main difference is an ndarray indexing bug fix. Once this is tested and patched, a pull request will be submitted.  
+
 =============
 Demo Notebook
 =============
@@ -24,16 +28,16 @@ We recommend using `conda <https://docs.conda.io/en/latest/>`_ for installing py
 
     conda create -n pysct louvain scanpy
     conda activate pysct
-    pip install git+https://github.com/saketkc/pysctransform.git@glmgp
+    pip install git+https://github.com/XiaYangLabOrg/pySCTransform.git
 
 If you would like to use `glmGamPoi <https://bioconductor.org/packages/release/bioc/html/glmGamPoi.html>`_, a faster estimator, ``rpy2`` and ``glmGamPoi`` need to be installed as well:
 
 .. code-block:: bash
 
-    conda create -n pysct louvain scanpy rpy2 bioconductor-glmgampoi
+    conda create -n pysct louvain scanpy
     conda activate pysct
-    pip install git+https://github.com/saketkc/pysctransform.git
-
+    conda install -c bioconda rpy2 bioconductor-glmgampoi
+    pip install git+https://github.com/XiaYangLabOrg/pySCTransform.git
 
 ==========
 Quickstart
