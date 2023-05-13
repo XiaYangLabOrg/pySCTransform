@@ -46,7 +46,7 @@ def ksmooth(genes_log_gmean, genes_log_gmean_step1, col_to_smooth, bw):
         bandwidth=bw,
         kernel="normal",
     )
-    dispersion_par = dispersion_par[dispersion_par.names.index("y")]
+    dispersion_par = dispersion_par[list(dispersion_par.names).index("y")]
     return {"smoothed": dispersion_par, "order": o}
 
 
